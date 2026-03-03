@@ -1,0 +1,48 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Connect to the device",
+        "description": "Enter the iLO hostname or IP address and SSL port (typically 443 for iLO 3+ or 17988 for iLO 2).",
+        "data": {
+          "host": "[%key:common::config_flow::data::host%]",
+          "port": "[%key:common::config_flow::data::port%]"
+        }
+      },
+      "auth": {
+        "title": "Authenticate to the device",
+        "description": "Enter your iLO credentials for {host}",
+        "data": {
+          "username": "[%key:common::config_flow::data::username%]",
+          "password": "[%key:common::config_flow::data::password%]"
+        }
+      },
+      "finish": {
+        "title": "Choose a name for the device",
+        "data": {
+          "name": "[%key:common::config_flow::data::name%]"
+        }
+      },
+      "confirm": {
+        "title": "Confirm HP iLO Connection Settings",
+        "description": "Discovered HP iLO device: **{name}** ({description})\n\n**Please confirm or edit the connection settings below.** The iLO interface always uses SSL/TLS encryption.",
+        "data": {
+          "host": "[%key:common::config_flow::data::host%]",
+          "port": "[%key:common::config_flow::data::port%]"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "already_in_progress": "[%key:common::config_flow::abort::already_in_progress%]",
+      "ssdp_server_error": "Invalid iLO device discovered. The device does not appear to be a valid HP iLO server."
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "invalid_host": "[%key:common::config_flow::error::invalid_host%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    }
+  }
+}
