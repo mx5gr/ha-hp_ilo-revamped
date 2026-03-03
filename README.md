@@ -182,7 +182,7 @@ Health/config entities not in diagnostics panel | EntityCategory.DIAGNOSTIC appl
 <li>HP ProLiant MicroServer Gen8</li>
 <li>iLO 4 firmware <code>2.82 Feb 06 2023</code></li>
 <li>Intel Xeon E3-1220 V2, mixed DDR3 DIMMs</li>
-<li>Home Assistant with <code>python-hpilo</code></li>
+<li>Home Assistant 2026.2.3 with <code>python-hpilo</code></li>
 </ul>
 
 ---
