@@ -1,0 +1,24 @@
+{
+  "domain": "hp_ilo",
+  "name": "HP Integrated Lights-Out (ILO)",
+  "codeowners": [
+    "@mx5gr"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/mx5gr/ha-hp_ilo-revamped",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/mx5gr/ha-hp_ilo-revamped/issues",
+  "loggers": [
+    "hp_ilo"
+  ],
+  "requirements": [
+    "python-hpilo==4.4.3"
+  ],
+  "ssdp": [
+    {
+      "deviceType": "urn:schemas-upnp-org:device:Basic:1",
+      "manufacturer": "Hewlett Packard Enterprise"
+    }
+  ],
+  "version": "0.1.0"
+}
